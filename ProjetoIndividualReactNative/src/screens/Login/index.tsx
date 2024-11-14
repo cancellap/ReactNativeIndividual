@@ -2,8 +2,14 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { TextInputField } from "../../components/InputText";
 import { styles } from "./style";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Login() {
+  const navigate = useNavigation();
+
+  const handleLogin = () => {
+    navigate.navigate("StackHome")
+  };
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -22,7 +28,7 @@ export default function Login() {
         <Text style={styles.forgotEmail}>Esqueceu seu e-mail?</Text>
         <Text style={styles.creatCount}>Criar conta</Text>
       </View>
-      <TouchableOpacity style={styles.nextButton}>
+      <TouchableOpacity style={styles.nextButton} onPress={handleLogin}>
         <Text style={styles.nextButtonText}>Próxima</Text>
       </TouchableOpacity>
     </View>

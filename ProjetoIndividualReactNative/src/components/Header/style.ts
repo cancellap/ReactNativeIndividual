@@ -10,14 +10,14 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
-    padding: 10,
+    padding: 12,
     backgroundColor: "#202125",
     elevation: 4,
   },
+  
   title: {
     paddingLeft: 20,
     fontSize: 20,
-    // fontWeight: "bold",
     color: "#FFFFFF",
     flex: 1,
   },

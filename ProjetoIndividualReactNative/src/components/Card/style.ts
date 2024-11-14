@@ -2,11 +2,12 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#2B2F3A",
+    backgroundColor: "#202125",
     borderRadius: 10,
     overflow: "hidden",
     marginVertical: 10,
     padding: 1,
+    marginTop: 1.1,
     elevation: 30,
     justifyContent: "flex-start",
     margin: 9,
@@ -35,11 +36,11 @@ export const styles = StyleSheet.create({
     color: "#ffff",
     fontSize: 14,
     fontWeight: "500",
-    textAlign: "right",
+    textAlign: "left",
     padding: 12,
   },
   imageBackground: {
-    borderRadius: 10,
+    borderRadius: 0,
     height: 100,
     justifyContent: "center",
     paddingHorizontal: 10,

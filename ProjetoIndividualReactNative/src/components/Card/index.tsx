@@ -1,14 +1,22 @@
-import { View, Text, ImageBackground } from "react-native";
+// Card.tsx
 import React from "react";
+import {
+  View,
+  Text,
+  ImageBackground,
+  ImageSourcePropType,
+  StyleProp,
+  ViewStyle,
+} from "react-native";
 import { styles } from "./style";
-import Imagecard from "../../assets/imageCard.webp";
 
 interface PropsCard {
   titulo: string;
   descricao: string;
   turma: string;
+  image: ImageSourcePropType;
   atividade?: string;
-  image?: string;
+  style?: StyleProp<ViewStyle>;
 }
 
 export default function Card({
@@ -17,12 +25,11 @@ export default function Card({
   descricao,
   turma,
   image,
+  style,
 }: PropsCard) {
   return (
-    <View
-      style={styles.container}
-    >
-      <ImageBackground source={Imagecard}>
+    <View style={[styles.container, style]}>
+      <ImageBackground source={image} resizeMode="cover">
         <Text style={styles.title}>{titulo}</Text>
         <Text style={styles.descricao}>{descricao}</Text>
         <Text style={styles.turma}>{turma}</Text>
